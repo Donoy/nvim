@@ -1,10 +1,3 @@
-require "nvchad.options"
-
--- add yours here!
-
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
-
 vim.cmd "let g:netrw_liststyle = 3"
 
 local opt = vim.opt
