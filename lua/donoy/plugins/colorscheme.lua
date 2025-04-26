@@ -1,45 +1,28 @@
 return {
-  "folke/tokyonight.nvim",
-  priority = 1000,
-  config = function()
-    local transparent = false -- set to true if you would like to enable transparency
-
-    local bg = "#011628"
-    local bg_dark = "#011423"
-    local bg_highlight = "#143652"
-    local bg_search = "#0A64AC"
-    local bg_visual = "#275378"
-    local fg = "#CBE0F0"
-    local fg_dark = "#B4D0E9"
-    local fg_gutter = "#627E97"
-    local border = "#547998"
-
-    require("tokyonight").setup({
-      style = "night",
-      transparent = transparent,
-      styles = {
-        sidebars = transparent and "transparent" or "dark",
-        floats = transparent and "transparent" or "dark",
-      },
-      on_colors = function(colors)
-        colors.bg = bg
-        colors.bg_dark = transparent and colors.none or bg_dark
-        colors.bg_float = transparent and colors.none or bg_dark
-        colors.bg_highlight = bg_highlight
-        colors.bg_popup = bg_dark
-        colors.bg_search = bg_search
-        colors.bg_sidebar = transparent and colors.none or bg_dark
-        colors.bg_statusline = transparent and colors.none or bg_dark
-        colors.bg_visual = bg_visual
-        colors.border = border
-        colors.fg = fg
-        colors.fg_dark = fg_dark
-        colors.fg_float = fg
-        colors.fg_gutter = fg_gutter
-        colors.fg_sidebar = fg_dark
-      end,
-    })
-
-    vim.cmd("colorscheme tokyonight")
-  end,
+  -- main color scheme
+  {
+    "wincent/base16-nvim",
+    lazy = false, -- load at start
+    priority = 1000, -- load first
+    config = function()
+      vim.cmd [[colorscheme gruvbox-dark-hard]]
+      vim.o.background = "dark"
+      -- XXX: hi Normal ctermbg=NONE
+      -- Make comments more prominent -- they are important.
+      local bools = vim.api.nvim_get_hl(0, { name = "Boolean" })
+      vim.api.nvim_set_hl(0, "Comment", bools)
+      -- Make it clearly visible which argument we're at.
+      local marked = vim.api.nvim_get_hl(0, { name = "PMenu" })
+      vim.api.nvim_set_hl(
+        0,
+        "LspSignatureActiveParameter",
+        { fg = marked.fg, bg = marked.bg, ctermfg = marked.ctermfg, ctermbg = marked.ctermbg, bold = true }
+      )
+      -- XXX
+      -- Would be nice to customize the highlighting of warnings and the like to make
+      -- them less glaring. But alas
+      -- https://github.com/nvim-lua/lsp_extensions.nvim/issues/21
+      -- call Base16hi("CocHintSign", g:base16_gui03, "", g:base16_cterm03, "", "", "")
+    end,
+  },
 }
