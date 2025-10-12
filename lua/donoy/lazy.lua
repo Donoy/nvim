@@ -165,7 +165,7 @@ require("lazy").setup({
 			--   https://github.com/jonhoo/proximity-sort
 			--
 			-- to prefer files closer to the current file.
-			vim.keymap.set('', '<leader>f', function()
+			vim.keymap.set('', '<leader>ff', function()
 				opts = {}
 				opts.cmd = 'fd --color=never --hidden --type f --type l --exclude .git'
 				local base = vim.fn.fnamemodify(vim.fn.expand('%'), ':h:.:S')
@@ -279,7 +279,7 @@ require("lazy").setup({
 					vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, opts)
 					vim.keymap.set({ 'n', 'v' }, '<leader>a', vim.lsp.buf.code_action, opts)
 					vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-					vim.keymap.set('n', '<leader>f', function()
+					vim.keymap.set('n', '<leader>fc', function()
 						vim.lsp.buf.format { async = true }
 					end, opts)
 
@@ -424,4 +424,5 @@ require("lazy").setup({
 			vim.g.vim_markdown_auto_insert_bullets = 0
 		end
 	},
+	-- at here these all my plugin --
 })

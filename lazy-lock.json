@@ -20,6 +20,6 @@
   "vim-svelte": { "branch": "main", "commit": "f6df955ad86583e9751487eb7550fae9e53d2d6b" },
   "vim-terraform": { "branch": "master", "commit": "520498fab16a3a11f2ae1b8cb65e0a1684bc317a" },
   "vim-toml": { "branch": "main", "commit": "1b63257680eeb65677eb1ca5077809a982756d58" },
-  "vimtex": { "branch": "master", "commit": "5c457a8a4dd57ca942260ff843a5482b064d9d9b" },
+  "vimtex": { "branch": "master", "commit": "7c7880d80166a5bb65e8c399843103cf0527b6ae" },
   "yaml.nvim": { "branch": "main", "commit": "e70ee49f7aefc79dce020d3ffc3c9447b0c52236" }
 }

@@ -72,3 +72,19 @@ vim.keymap.set('n', '<leader>m', 'ct_')
 -- F1 is pretty close to Esc, so you probably meant Esc
 vim.keymap.set('', '<F1>', '<Esc>')
 vim.keymap.set('i', '<F1>', '<Esc>')
+
+-- at here keymap by myself --
+-- window management
+-- split window vertically
+vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
+-- split window horizontally
+vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
+-- make split windows equal width & height
+vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) 
+-- close current split window
+vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) 
+-- switch window left 
+vim.keymap.set("n", "<leader>hh", "<C-w>h", { desc = "Switch to left window" })
+vim.keymap.set("n", "<leader>jj", "<C-w>j", { desc = "Switch to down window" })
+vim.keymap.set("n", "<leader>kk", "<C-w>k", { desc = "Switch to top window" })
+vim.keymap.set("n", "<leader>ll", "<C-w>l", { desc = "Switch to right window" })
