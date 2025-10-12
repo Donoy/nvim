@@ -165,7 +165,7 @@ require("lazy").setup({
 			--   https://github.com/jonhoo/proximity-sort
 			--
 			-- to prefer files closer to the current file.
-			vim.keymap.set('', '<C-p>', function()
+			vim.keymap.set('', '<leader>f', function()
 				opts = {}
 				opts.cmd = 'fd --color=never --hidden --type f --type l --exclude .git'
 				local base = vim.fn.fnamemodify(vim.fn.expand('%'), ':h:.:S')

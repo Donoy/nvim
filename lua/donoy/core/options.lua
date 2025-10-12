@@ -1,3 +1,8 @@
+-- this is my own setting for nvim --
+-- set shared yank with system clipboard
+vim.opt.clipboard = unnamedplus
+
+-- here is copy from jonhoo --
 -- never ever folding
 vim.opt.foldenable = false
 vim.opt.foldmethod = 'manual'
