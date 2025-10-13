@@ -197,15 +197,7 @@ require("lazy").setup({
 			end)
 			-- use fzf to search content in dir like cat and grep
 			vim.keymap.set('n', '<leader>fg', function()
-				require'fzf-lua'.buffers({
-					-- just include the paths in the fzf bits, and nothing else
-					-- https://github.com/ibhagwan/fzf-lua/issues/2230#issuecomment-3164258823
-					fzf_opts = {
-					  ["--with-nth"]      = "{-3..-2}",
-					  ["--nth"]           = "-1",
-					  ["--delimiter"]     = "[:\u{2002}]",
-					  ["--header-lines"]  = "false",
-					},
+				require'fzf-lua'.live_grep({
 					header = false,
 				})
 			end)

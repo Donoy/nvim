@@ -130,6 +130,7 @@
 - \<leader>ff 之后 ctrl + b --- 向上翻搜索结果
 - \<leader>ff 之后 ctrl + f ---  向下翻搜索结果
 - \<leader>ff 之后 ctrl + shift + hjkl ---  按行向下翻搜索结果
+- \<leader>fg 之后 和\<leader>ff类似
 
 ### 其他绑定的keymap
 - ;   ---- 模拟按 : 快捷进入命令模式
