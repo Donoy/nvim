@@ -165,7 +165,7 @@ require("lazy").setup({
 			--   https://github.com/jonhoo/proximity-sort
 			--
 			-- to prefer files closer to the current file.
-			vim.keymap.set('', '<leader>ff', function()
+			vim.keymap.set('', '<leader>f', function()
 				opts = {}
 				opts.cmd = 'fd --color=never --hidden --type f --type l --exclude .git'
 				local base = vim.fn.fnamemodify(vim.fn.expand('%'), ':h:.:S')
@@ -182,7 +182,7 @@ require("lazy").setup({
 				require'fzf-lua'.files(opts)
 			end)
 			-- use fzf to search buffers as well
-			vim.keymap.set('n', '<leader>fb', function()
+			vim.keymap.set('n', '<leader>;', function()
 				require'fzf-lua'.buffers({
 					-- just include the paths in the fzf bits, and nothing else
 					-- https://github.com/ibhagwan/fzf-lua/issues/2230#issuecomment-3164258823
@@ -196,7 +196,7 @@ require("lazy").setup({
 				})
 			end)
 			-- use fzf to search content in dir like cat and grep
-			vim.keymap.set('n', '<leader>fg', function()
+			vim.keymap.set('n', '<leader>g', function()
 				require'fzf-lua'.live_grep({
 					header = false,
 				})
