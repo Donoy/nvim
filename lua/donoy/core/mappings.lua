@@ -88,3 +88,8 @@ vim.keymap.set("n", "<leader>hh", "<C-w>h", { desc = "Switch to left window" })
 vim.keymap.set("n", "<leader>jj", "<C-w>j", { desc = "Switch to down window" })
 vim.keymap.set("n", "<leader>kk", "<C-w>k", { desc = "Switch to top window" })
 vim.keymap.set("n", "<leader>ll", "<C-w>l", { desc = "Switch to right window" })
+-- Redo
+vim.keymap.set("n", "U", "<C-r>")
+-- jump fast
+vim.keymap.set("n", "J", "5j")
+vim.keymap.set("n", "K", "5k")
