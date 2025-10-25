@@ -9,8 +9,6 @@
 " ================================================================================================
 " 🐧🐧🐧 Basic settings 🐧🐧🐧
 " ================================================================================================
-"--开启surround(包裹功能)
-set surround
 "设置在光标距离窗口顶部或底部一定行数时，开始滚动屏幕内容的行为
 set scrolloff=10
 
@@ -79,9 +77,9 @@ nnoremap <leader>fg :action FindInPath<CR>
 " bookmark 切换书签
 nmap ma <action>(ToggleBookmark)
 
-"切换标签页
-noremap H ^
-noremap L $
+" 快速跳转行首尾
+nnoremap H ^
+nnoremap L $
 " 在已打开的 Tab 间切换（下一个）
 nnoremap <leader><leader> <C-^>
 
@@ -101,7 +99,6 @@ nmap <leader>ll <c-w>l
 nnoremap gD :action GotoDeclaration<CR>
 nnoremap gd :action GotoImplementation<CR>
 nnoremap gi :action GotoTypeDeclaration<CR>
-nnoremap K  :action QuickDocumentation<CR>
 nnoremap <C-k> :action QuickDocumentation<CR>
 
 " 重命名 / 意图动作 / 查找引用 / 格式化：
